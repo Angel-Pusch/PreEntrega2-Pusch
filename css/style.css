@@ -6,19 +6,41 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 #grilla {
     display: grid;
     grid-template-areas:
-        "nav header header"
-        "nav productos publicidad"
-        "nav servicios publicidad"
-        "nav footer footer";
-    grid-template-rows: 100px 1fr 1fr 75px;
-    grid-template-columns: 20% auto 15%;
+        "header header header"
+        "nav buscador publicados"
+        "nav buscador publicados"
+        "footer footer footer";
+    grid-template-rows: 126.7px 1fr 1fr 75px;
+    grid-template-columns: 2fr 6fr 2.5fr;
     grid-column-gap: 10px;
     grid-row-gap: 15px;
     height: 100vh;
+}
+
+header {
+    grid-area: header;
+}
+header ul {
+    list-style-type: none;
+}
+
+footer {
+    grid-area: footer;
+}
+
+section#buscador {
+    grid-area: buscador;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+aside {
+    grid-area: publicados;
 }
 
 .border {
@@ -26,26 +48,96 @@
     background-color: yellow;
 }
 
-header {
-    grid-area: header;
+.topbar {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #272B2D;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
-footer {
-    grid-area: footer;
+.brand {
+    width: 14rem;
+    display: flex;
+    align-items: center;
 }
 
-section#productos {
-    grid-area: productos;
+.brand a {
+    text-decoration: none;
 }
 
-section#servicios {
-    grid-area: servicios;
+.brand img {
+    float: left;
+    width: 3rem;
 }
 
-nav{
-    grid-area: nav;
+
+.brand_tittle {
+    padding-top: 20%;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2rem;
+
+    color: #fefffe;
 }
 
-aside{
-    grid-area: publicidad;
+.brand_second_tittle {
+    color: #f44336;
+}
+
+.topbar_social {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 40rem;
+}
+
+.topbar_items {
+    padding: 0.3rem 0rem 0.3rem 0rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.topbar_items ul li a {
+    color: #fefffe;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+.icon {
+    height: 1.2rem;
+}
+
+.icon_s {
+    padding-right: 0.3rem;
+}
+
+.nav_links {
+    background-color: #f44336;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.nav_links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav_links ul li a {
+    color: #fefffe;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.nav_links ul li:hover {
+    background: #272B2D;
+    transition: 0.55s;
+    font-weight: 300;
+    margin-left: 0.3rem;
+    margin-right: 0.3rem;
 }
